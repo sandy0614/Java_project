@@ -1,0 +1,23 @@
+public class ThrowException {
+	static void validat(int age){
+		try{
+		if(age>18){
+			System.out.println("Has Voting Power");
+		}else throw new ArithmeticException("Has no Voting Power");
+			  throw new NumberFormatException("Age format should in digits between 0 to 9");
+	}catch(ArithmeticException e){
+		System.out.println(e);
+	}
+		catch(NumberFormatException e1){
+			System.out.println(e1);
+		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Age validator for Voter ID");
+		int age='c';
+		validat(age);
+		System.out.println("Your age is: "+age);
+	}
+
+}
